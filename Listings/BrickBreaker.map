@@ -1,0 +1,1375 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.main) refers to menu.o(.text.show_menu) for show_menu
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.gpio_set_output) refers to gpio.o(.text.gpio_set_output) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.gpio_set_high) refers to gpio.o(.text.gpio_set_high) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.gpio_set_low) refers to gpio.o(.text.gpio_set_low) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.gpio_toggle) refers to gpio.o(.text.gpio_toggle) for [Anonymous Symbol]
+    spi.o(.text.spi_init) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    spi.o(.text.spi_init) refers to system_mkl05z4.o(.data.SystemCoreClock) for SystemCoreClock
+    spi.o(.ARM.exidx.text.spi_init) refers to spi.o(.text.spi_init) for [Anonymous Symbol]
+    spi.o(.text.spi_master_write) refers to spi.o(.text.spi_writeable) for spi_writeable
+    spi.o(.text.spi_master_write) refers to spi.o(.text.spi_readable) for spi_readable
+    spi.o(.ARM.exidx.text.spi_master_write) refers to spi.o(.text.spi_master_write) for [Anonymous Symbol]
+    spi.o(.text.spi_slave_receive) refers to spi.o(.text.spi_readable) for spi_readable
+    spi.o(.ARM.exidx.text.spi_slave_receive) refers to spi.o(.text.spi_slave_receive) for [Anonymous Symbol]
+    spi.o(.ARM.exidx.text.spi_slave_read) refers to spi.o(.text.spi_slave_read) for [Anonymous Symbol]
+    spi.o(.text.spi_slave_write) refers to spi.o(.text.spi_writeable) for spi_writeable
+    spi.o(.ARM.exidx.text.spi_slave_write) refers to spi.o(.text.spi_slave_write) for [Anonymous Symbol]
+    spi.o(.ARM.exidx.text.spi_writeable) refers to spi.o(.text.spi_writeable) for [Anonymous Symbol]
+    spi.o(.ARM.exidx.text.spi_readable) refers to spi.o(.text.spi_readable) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_display_startup_message) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    oled.o(.text.ssd1306_display_startup_message) refers to oled.o(.text.ssd1306_display_char) for ssd1306_display_char
+    oled.o(.text.ssd1306_display_startup_message) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    oled.o(.text.ssd1306_display_startup_message) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    oled.o(.ARM.exidx.text.ssd1306_display_startup_message) refers to oled.o(.text.ssd1306_display_startup_message) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_clear_screen) refers to oled.o(.bss.s_chDispalyBuffer) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.ssd1306_clear_screen) refers to oled.o(.text.ssd1306_clear_screen) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_display_char) refers to oled.o(.text.ssd1306_draw_point) for ssd1306_draw_point
+    oled.o(.text.ssd1306_display_char) refers to fonts.o(.rodata.c_chFont1206) for c_chFont1206
+    oled.o(.ARM.exidx.text.ssd1306_display_char) refers to oled.o(.text.ssd1306_display_char) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_display_string) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    oled.o(.text.ssd1306_display_string) refers to oled.o(.text.ssd1306_display_char) for ssd1306_display_char
+    oled.o(.ARM.exidx.text.ssd1306_display_string) refers to oled.o(.text.ssd1306_display_string) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_refresh_gram) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.text.ssd1306_refresh_gram) refers to oled.o(.bss.s_chDispalyBuffer) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.ssd1306_refresh_gram) refers to oled.o(.text.ssd1306_refresh_gram) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_write_byte) refers to gpio.o(.text.gpio_set_high) for gpio_set_high
+    oled.o(.text.ssd1306_write_byte) refers to gpio.o(.text.gpio_set_low) for gpio_set_low
+    oled.o(.text.ssd1306_write_byte) refers to spi.o(.text.spi_master_write) for spi_master_write
+    oled.o(.ARM.exidx.text.ssd1306_write_byte) refers to oled.o(.text.ssd1306_write_byte) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_display_on) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.ARM.exidx.text.ssd1306_display_on) refers to oled.o(.text.ssd1306_display_on) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_display_off) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.ARM.exidx.text.ssd1306_display_off) refers to oled.o(.text.ssd1306_display_off) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_draw_point) refers to oled.o(.bss.s_chDispalyBuffer) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.ssd1306_draw_point) refers to oled.o(.text.ssd1306_draw_point) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_draw_string_custom) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    oled.o(.ARM.exidx.text.ssd1306_draw_string_custom) refers to oled.o(.text.ssd1306_draw_string_custom) for [Anonymous Symbol]
+    oled.o(.text.draw_bitmap) refers to oled.o(.text.ssd1306_draw_point) for ssd1306_draw_point
+    oled.o(.ARM.exidx.text.draw_bitmap) refers to oled.o(.text.draw_bitmap) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_init) refers to gpio.o(.text.gpio_set_output) for gpio_set_output
+    oled.o(.text.ssd1306_init) refers to gpio.o(.text.gpio_set_low) for gpio_set_low
+    oled.o(.text.ssd1306_init) refers to gpio.o(.text.gpio_set_high) for gpio_set_high
+    oled.o(.text.ssd1306_init) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.text.ssd1306_init) refers to oled.o(.text.ssd1306_display_startup_message) for ssd1306_display_startup_message
+    oled.o(.text.ssd1306_init) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    oled.o(.ARM.exidx.text.ssd1306_init) refers to oled.o(.text.ssd1306_init) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_set_framerate) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.ARM.exidx.text.ssd1306_set_framerate) refers to oled.o(.text.ssd1306_set_framerate) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_set_orientation) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.ARM.exidx.text.ssd1306_set_orientation) refers to oled.o(.text.ssd1306_set_orientation) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_set_addressing_mode) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    oled.o(.ARM.exidx.text.ssd1306_set_addressing_mode) refers to oled.o(.text.ssd1306_set_addressing_mode) for [Anonymous Symbol]
+    oled.o(.text.clear_bitmap) refers to oled.o(.text.ssd1306_draw_point) for ssd1306_draw_point
+    oled.o(.ARM.exidx.text.clear_bitmap) refers to oled.o(.text.clear_bitmap) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_get_pixel) refers to oled.o(.bss.s_chDispalyBuffer) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.ssd1306_get_pixel) refers to oled.o(.text.ssd1306_get_pixel) for [Anonymous Symbol]
+    oled.o(.text.ssd1306_set_pixel) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    oled.o(.text.ssd1306_set_pixel) refers to oled.o(.bss.s_chDispalyBuffer) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.ssd1306_set_pixel) refers to oled.o(.text.ssd1306_set_pixel) for [Anonymous Symbol]
+    oled.o(.text.draw_digit) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    oled.o(.text.draw_digit) refers to fonts.o(.rodata.font_digits) for font_digits
+    oled.o(.ARM.exidx.text.draw_digit) refers to oled.o(.text.draw_digit) for [Anonymous Symbol]
+    oled.o(.text.draw_number) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_idiv
+    oled.o(.text.draw_number) refers to aeabi_sdivfast.o(.text) for __aeabi_idivmod
+    oled.o(.text.draw_number) refers to oled.o(.text.draw_digit) for draw_digit
+    oled.o(.ARM.exidx.text.draw_number) refers to oled.o(.text.draw_number) for [Anonymous Symbol]
+    tsi.o(.text.TSI_Init) refers to tsi.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    tsi.o(.text.TSI_Init) refers to tsi.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    tsi.o(.text.TSI_Init) refers to tsi.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    tsi.o(.text.TSI_Init) refers to tsi.o(.text.self_calibration) for self_calibration
+    tsi.o(.ARM.exidx.text.TSI_Init) refers to tsi.o(.text.TSI_Init) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.__NVIC_SetPriority) refers to tsi.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to tsi.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to tsi.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    tsi.o(.text.self_calibration) refers to tsi.o(.rodata.elec_array) for [Anonymous Symbol]
+    tsi.o(.text.self_calibration) refers to tsi.o(.bss.gu16Baseline) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.self_calibration) refers to tsi.o(.text.self_calibration) for [Anonymous Symbol]
+    tsi.o(.text.TSI_ReadSlider) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    tsi.o(.text.TSI_ReadSlider) refers to tsi.o(.bss.end_flag) for [Anonymous Symbol]
+    tsi.o(.text.TSI_ReadSlider) refers to tsi.o(.bss.gu16Delta) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.TSI_ReadSlider) refers to tsi.o(.text.TSI_ReadSlider) for [Anonymous Symbol]
+    tsi.o(.text.change_electrode) refers to tsi.o(.bss.end_flag) for [Anonymous Symbol]
+    tsi.o(.text.change_electrode) refers to tsi.o(.bss.ongoing_elec) for [Anonymous Symbol]
+    tsi.o(.text.change_electrode) refers to tsi.o(.bss.gu16Baseline) for [Anonymous Symbol]
+    tsi.o(.text.change_electrode) refers to tsi.o(.bss.gu16Delta) for [Anonymous Symbol]
+    tsi.o(.text.change_electrode) refers to tsi.o(.rodata.elec_array) for [Anonymous Symbol]
+    tsi.o(.ARM.exidx.text.change_electrode) refers to tsi.o(.text.change_electrode) for [Anonymous Symbol]
+    tsi.o(.text.TSI0_IRQHandler) refers to tsi.o(.text.change_electrode) for change_electrode
+    tsi.o(.ARM.exidx.text.TSI0_IRQHandler) refers to tsi.o(.text.TSI0_IRQHandler) for [Anonymous Symbol]
+    arkanoid.o(.text.convert_map) refers to arkanoid.o(.bss.blocks) for blocks
+    arkanoid.o(.ARM.exidx.text.convert_map) refers to arkanoid.o(.text.convert_map) for [Anonymous Symbol]
+    arkanoid.o(.text.load_next_map) refers to arkanoid.o(.text.convert_map) for convert_map
+    arkanoid.o(.text.load_next_map) refers to arkanoid.o(.bss.current_map) for current_map
+    arkanoid.o(.text.load_next_map) refers to maps.o(.rodata.maps) for maps
+    arkanoid.o(.ARM.exidx.text.load_next_map) refers to arkanoid.o(.text.load_next_map) for [Anonymous Symbol]
+    arkanoid.o(.text.reset_ball) refers to arkanoid.o(.bss.ball_is_reset) for [Anonymous Symbol]
+    arkanoid.o(.ARM.exidx.text.reset_ball) refers to arkanoid.o(.text.reset_ball) for [Anonymous Symbol]
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.text.reset_ball) for reset_ball
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.text.start_ball_after_delay) for start_ball_after_delay
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.text.check_collision) for check_collision
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.text.handle_block_collision) for handle_block_collision
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.bss.ball_is_reset) for [Anonymous Symbol]
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.bss.blocks) for blocks
+    arkanoid.o(.text.ball_update) refers to arkanoid.o(.data.lives) for lives
+    arkanoid.o(.ARM.exidx.text.ball_update) refers to arkanoid.o(.text.ball_update) for [Anonymous Symbol]
+    arkanoid.o(.text.start_ball_after_delay) refers to arkanoid.o(.bss.ball_is_reset) for [Anonymous Symbol]
+    arkanoid.o(.ARM.exidx.text.start_ball_after_delay) refers to arkanoid.o(.text.start_ball_after_delay) for [Anonymous Symbol]
+    arkanoid.o(.ARM.exidx.text.check_collision) refers to arkanoid.o(.text.check_collision) for [Anonymous Symbol]
+    arkanoid.o(.text.handle_block_collision) refers to arkanoid.o(.bss.current_score) for current_score
+    arkanoid.o(.ARM.exidx.text.handle_block_collision) refers to arkanoid.o(.text.handle_block_collision) for [Anonymous Symbol]
+    arkanoid.o(.text.check_map_complete) refers to arkanoid.o(.bss.blocks) for blocks
+    arkanoid.o(.ARM.exidx.text.check_map_complete) refers to arkanoid.o(.text.check_map_complete) for [Anonymous Symbol]
+    arkanoid.o(.text.paddle_update) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    arkanoid.o(.ARM.exidx.text.paddle_update) refers to arkanoid.o(.text.paddle_update) for [Anonymous Symbol]
+    arkanoid.o(.text.get_lives) refers to arkanoid.o(.data.lives) for lives
+    arkanoid.o(.ARM.exidx.text.get_lives) refers to arkanoid.o(.text.get_lives) for [Anonymous Symbol]
+    arkanoid.o(.text.get_score) refers to arkanoid.o(.bss.current_score) for current_score
+    arkanoid.o(.ARM.exidx.text.get_score) refers to arkanoid.o(.text.get_score) for [Anonymous Symbol]
+    arkanoid.o(.text.game_init) refers to arkanoid.o(.text.load_next_map) for load_next_map
+    arkanoid.o(.text.game_init) refers to arkanoid.o(.bss.current_map) for current_map
+    arkanoid.o(.text.game_init) refers to arkanoid.o(.bss.current_score) for current_score
+    arkanoid.o(.text.game_init) refers to arkanoid.o(.data.lives) for lives
+    arkanoid.o(.ARM.exidx.text.game_init) refers to arkanoid.o(.text.game_init) for [Anonymous Symbol]
+    scores.o(.text.update_top_scores) refers to strncpy.o(.text) for strncpy
+    scores.o(.text.update_top_scores) refers to scores.o(.data.top_scores) for [Anonymous Symbol]
+    scores.o(.ARM.exidx.text.update_top_scores) refers to scores.o(.text.update_top_scores) for [Anonymous Symbol]
+    scores.o(.text.get_top_scores) refers to scores.o(.data.top_scores) for [Anonymous Symbol]
+    scores.o(.ARM.exidx.text.get_top_scores) refers to scores.o(.text.get_top_scores) for [Anonymous Symbol]
+    game.o(.text.start_game) refers to arkanoid.o(.text.game_init) for game_init
+    game.o(.text.start_game) refers to game_draw.o(.text.draw_game) for draw_game
+    game.o(.text.start_game) refers to tsi.o(.text.TSI_ReadSlider) for TSI_ReadSlider
+    game.o(.text.start_game) refers to arkanoid.o(.text.paddle_update) for paddle_update
+    game.o(.text.start_game) refers to arkanoid.o(.text.ball_update) for ball_update
+    game.o(.text.start_game) refers to arkanoid.o(.text.check_map_complete) for check_map_complete
+    game.o(.text.start_game) refers to arkanoid.o(.text.load_next_map) for load_next_map
+    game.o(.text.start_game) refers to arkanoid.o(.text.reset_ball) for reset_ball
+    game.o(.text.start_game) refers to arkanoid.o(.text.get_score) for get_score
+    game.o(.text.start_game) refers to scores.o(.text.update_top_scores) for update_top_scores
+    game.o(.text.start_game) refers to game_draw.o(.text.game_over_display) for game_over_display
+    game.o(.text.start_game) refers to arkanoid.o(.data.lives) for lives
+    game.o(.text.start_game) refers to arkanoid.o(.data.game_speed) for game_speed
+    game.o(.ARM.exidx.text.start_game) refers to game.o(.text.start_game) for [Anonymous Symbol]
+    game_draw.o(.text.draw_paddle) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    game_draw.o(.text.draw_paddle) refers to fonts.o(.rodata.paddle_bitmap) for paddle_bitmap
+    game_draw.o(.ARM.exidx.text.draw_paddle) refers to game_draw.o(.text.draw_paddle) for [Anonymous Symbol]
+    game_draw.o(.text.draw_ball) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    game_draw.o(.text.draw_ball) refers to fonts.o(.rodata.ball_bitmap) for ball_bitmap
+    game_draw.o(.ARM.exidx.text.draw_ball) refers to game_draw.o(.text.draw_ball) for [Anonymous Symbol]
+    game_draw.o(.text.draw_block) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    game_draw.o(.text.draw_block) refers to fonts.o(.rodata.block_bitmap_1) for block_bitmap_1
+    game_draw.o(.text.draw_block) refers to fonts.o(.rodata.block_bitmap_4) for block_bitmap_4
+    game_draw.o(.text.draw_block) refers to fonts.o(.rodata.block_bitmap_3) for block_bitmap_3
+    game_draw.o(.text.draw_block) refers to fonts.o(.rodata.block_bitmap_2) for block_bitmap_2
+    game_draw.o(.ARM.exidx.text.draw_block) refers to game_draw.o(.text.draw_block) for [Anonymous Symbol]
+    game_draw.o(.text.draw_blocks) refers to game_draw.o(.text.draw_block) for draw_block
+    game_draw.o(.text.draw_blocks) refers to arkanoid.o(.bss.blocks) for blocks
+    game_draw.o(.ARM.exidx.text.draw_blocks) refers to game_draw.o(.text.draw_blocks) for [Anonymous Symbol]
+    game_draw.o(.text.draw_game) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    game_draw.o(.text.draw_game) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    game_draw.o(.text.draw_game) refers to arkanoid.o(.text.get_lives) for get_lives
+    game_draw.o(.text.draw_game) refers to oled.o(.text.draw_digit) for draw_digit
+    game_draw.o(.text.draw_game) refers to arkanoid.o(.text.get_score) for get_score
+    game_draw.o(.text.draw_game) refers to oled.o(.text.draw_number) for draw_number
+    game_draw.o(.text.draw_game) refers to game_draw.o(.text.draw_paddle) for draw_paddle
+    game_draw.o(.text.draw_game) refers to game_draw.o(.text.draw_ball) for draw_ball
+    game_draw.o(.text.draw_game) refers to game_draw.o(.text.draw_blocks) for draw_blocks
+    game_draw.o(.text.draw_game) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    game_draw.o(.text.draw_game) refers to fonts.o(.rodata.block_bitmap_heart) for block_bitmap_heart
+    game_draw.o(.text.draw_game) refers to fonts.o(.rodata.star_bitmap) for star_bitmap
+    game_draw.o(.ARM.exidx.text.draw_game) refers to game_draw.o(.text.draw_game) for [Anonymous Symbol]
+    game_draw.o(.text.game_over_display) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    game_draw.o(.text.game_over_display) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    game_draw.o(.text.game_over_display) refers to arkanoid.o(.text.get_score) for get_score
+    game_draw.o(.text.game_over_display) refers to oled.o(.text.draw_number) for draw_number
+    game_draw.o(.text.game_over_display) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    game_draw.o(.ARM.exidx.text.game_over_display) refers to game_draw.o(.text.game_over_display) for [Anonymous Symbol]
+    menu.o(.text.SysTick_Handler) refers to menu.o(.bss.czas) for czas
+    menu.o(.text.SysTick_Handler) refers to menu.o(.bss.sekunda) for sekunda
+    menu.o(.text.SysTick_Handler) refers to menu.o(.bss.sekunda_OK) for sekunda_OK
+    menu.o(.ARM.exidx.text.SysTick_Handler) refers to menu.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    menu.o(.text.millis) refers to menu.o(.bss.czas) for czas
+    menu.o(.ARM.exidx.text.millis) refers to menu.o(.text.millis) for [Anonymous Symbol]
+    menu.o(.text.setup_systick) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    menu.o(.text.setup_systick) refers to menu.o(.text.SysTick_Config) for SysTick_Config
+    menu.o(.text.setup_systick) refers to system_mkl05z4.o(.data.SystemCoreClock) for SystemCoreClock
+    menu.o(.ARM.exidx.text.setup_systick) refers to menu.o(.text.setup_systick) for [Anonymous Symbol]
+    menu.o(.text.SysTick_Config) refers to menu.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    menu.o(.ARM.exidx.text.SysTick_Config) refers to menu.o(.text.SysTick_Config) for [Anonymous Symbol]
+    menu.o(.text.wait_for_key_release) refers to keyboard.o(.text.Keyboard_ReadKey) for Keyboard_ReadKey
+    menu.o(.ARM.exidx.text.wait_for_key_release) refers to menu.o(.text.wait_for_key_release) for [Anonymous Symbol]
+    menu.o(.ARM.exidx.text.debounce_delay) refers to menu.o(.text.debounce_delay) for [Anonymous Symbol]
+    menu.o(.text.show_score_board) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    menu.o(.text.show_score_board) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    menu.o(.text.show_score_board) refers to scores.o(.text.get_top_scores) for get_top_scores
+    menu.o(.text.show_score_board) refers to oled.o(.text.draw_number) for draw_number
+    menu.o(.text.show_score_board) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    menu.o(.text.show_score_board) refers to menu.o(.text.debounce_delay) for debounce_delay
+    menu.o(.text.show_score_board) refers to keyboard.o(.text.Keyboard_ReadKey) for Keyboard_ReadKey
+    menu.o(.text.show_score_board) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    menu.o(.text.show_score_board) refers to menu.o(.text.wait_for_key_release) for wait_for_key_release
+    menu.o(.text.show_score_board) refers to keyboard.o(.data.key_map) for key_map
+    menu.o(.ARM.exidx.text.show_score_board) refers to menu.o(.text.show_score_board) for [Anonymous Symbol]
+    menu.o(.text.enter_username) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    menu.o(.text.enter_username) refers to keyboard.o(.text.Keyboard_ReadKey) for Keyboard_ReadKey
+    menu.o(.text.enter_username) refers to aeabi_sdivfast.o(.text) for __aeabi_uidivmod
+    menu.o(.text.enter_username) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    menu.o(.text.enter_username) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    menu.o(.text.enter_username) refers to menu.o(.text.debounce_delay) for debounce_delay
+    menu.o(.text.enter_username) refers to menu.o(.data.user_nickname) for user_nickname
+    menu.o(.ARM.exidx.text.enter_username) refers to menu.o(.text.enter_username) for [Anonymous Symbol]
+    menu.o(.text.show_oled_options) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    menu.o(.text.show_oled_options) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    menu.o(.text.show_oled_options) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    menu.o(.text.show_oled_options) refers to oled.o(.text.draw_digit) for draw_digit
+    menu.o(.text.show_oled_options) refers to aeabi_sdivfast.o(.text) for __aeabi_uidivmod
+    menu.o(.text.show_oled_options) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    menu.o(.text.show_oled_options) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    menu.o(.text.show_oled_options) refers to keyboard.o(.text.Keyboard_ReadKey) for Keyboard_ReadKey
+    menu.o(.text.show_oled_options) refers to menu.o(.text.debounce_delay) for debounce_delay
+    menu.o(.text.show_oled_options) refers to menu.o(.text.wait_for_key_release) for wait_for_key_release
+    menu.o(.text.show_oled_options) refers to oled.o(.text.ssd1306_write_byte) for ssd1306_write_byte
+    menu.o(.text.show_oled_options) refers to oled.o(.text.ssd1306_set_framerate) for ssd1306_set_framerate
+    menu.o(.text.show_oled_options) refers to menu.o(.data.oled_options) for oled_options
+    menu.o(.text.show_oled_options) refers to menu.o(.rodata.str1.1) for [Anonymous Symbol]
+    menu.o(.text.show_oled_options) refers to fonts.o(.rodata.block_bitmap_arrow) for block_bitmap_arrow
+    menu.o(.text.show_oled_options) refers to keyboard.o(.data.key_map) for key_map
+    menu.o(.ARM.exidx.text.show_oled_options) refers to menu.o(.text.show_oled_options) for [Anonymous Symbol]
+    menu.o(.text.show_menu) refers to menu.o(.text.setup_systick) for setup_systick
+    menu.o(.text.show_menu) refers to spi.o(.text.spi_init) for spi_init
+    menu.o(.text.show_menu) refers to oled.o(.text.ssd1306_init) for ssd1306_init
+    menu.o(.text.show_menu) refers to oled.o(.text.ssd1306_clear_screen) for ssd1306_clear_screen
+    menu.o(.text.show_menu) refers to keyboard.o(.text.Keyboard_Init) for Keyboard_Init
+    menu.o(.text.show_menu) refers to tsi.o(.text.TSI_Init) for TSI_Init
+    menu.o(.text.show_menu) refers to oled.o(.text.ssd1306_display_string) for ssd1306_display_string
+    menu.o(.text.show_menu) refers to oled.o(.text.draw_bitmap) for draw_bitmap
+    menu.o(.text.show_menu) refers to oled.o(.text.ssd1306_refresh_gram) for ssd1306_refresh_gram
+    menu.o(.text.show_menu) refers to keyboard.o(.text.Keyboard_ReadKey) for Keyboard_ReadKey
+    menu.o(.text.show_menu) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    menu.o(.text.show_menu) refers to menu.o(.text.debounce_delay) for debounce_delay
+    menu.o(.text.show_menu) refers to menu.o(.text.wait_for_key_release) for wait_for_key_release
+    menu.o(.text.show_menu) refers to game.o(.text.start_game) for start_game
+    menu.o(.text.show_menu) refers to menu.o(.text.show_score_board) for show_score_board
+    menu.o(.text.show_menu) refers to menu.o(.text.show_oled_options) for show_oled_options
+    menu.o(.text.show_menu) refers to menu.o(.text.enter_username) for enter_username
+    menu.o(.text.show_menu) refers to menu.o(.data.menu_options) for menu_options
+    menu.o(.text.show_menu) refers to fonts.o(.rodata.block_bitmap_arrow) for block_bitmap_arrow
+    menu.o(.text.show_menu) refers to keyboard.o(.data.key_map) for key_map
+    menu.o(.text.show_menu) refers to menu.o(.data.user_nickname) for user_nickname
+    menu.o(.ARM.exidx.text.show_menu) refers to menu.o(.text.show_menu) for [Anonymous Symbol]
+    menu.o(.ARM.exidx.text.__NVIC_SetPriority) refers to menu.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    menu.o(.data.menu_options) refers to menu.o(.rodata.str1.1) for [Anonymous Symbol]
+    menu.o(.data.oled_options) refers to menu.o(.rodata.str1.1) for [Anonymous Symbol]
+    keyboard.o(.ARM.exidx.text.Keyboard_Init) refers to keyboard.o(.text.Keyboard_Init) for [Anonymous Symbol]
+    keyboard.o(.ARM.exidx.text.Keyboard_ReadKey) refers to keyboard.o(.text.Keyboard_ReadKey) for [Anonymous Symbol]
+    keyboard.o(.data.key_map) refers to keyboard.o(.rodata.str1.1) for [Anonymous Symbol]
+    startup_mkl05z4.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mkl05z4.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mkl05z4.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mkl05z4.o(RESET) refers to startup_mkl05z4.o(STACK) for __initial_sp
+    startup_mkl05z4.o(RESET) refers to startup_mkl05z4.o(.text) for Reset_Handler
+    startup_mkl05z4.o(RESET) refers to menu.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_mkl05z4.o(RESET) refers to tsi.o(.text.TSI0_IRQHandler) for TSI0_IRQHandler
+    startup_mkl05z4.o(.ARM.__at_0x400) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mkl05z4.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mkl05z4.o(.text) refers to system_mkl05z4.o(.text.SystemInit) for SystemInit
+    startup_mkl05z4.o(.text) refers to __main.o(!!!main) for __main
+    startup_mkl05z4.o(.text) refers to startup_mkl05z4.o(HEAP) for Heap_Mem
+    startup_mkl05z4.o(.text) refers to startup_mkl05z4.o(STACK) for Stack_Mem
+    system_mkl05z4.o(.ARM.exidx.text.SystemInit) refers to system_mkl05z4.o(.text.SystemInit) for [Anonymous Symbol]
+    system_mkl05z4.o(.text.SystemCoreClockUpdate) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    system_mkl05z4.o(.text.SystemCoreClockUpdate) refers to system_mkl05z4.o(.data.SystemCoreClock) for SystemCoreClock
+    system_mkl05z4.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_mkl05z4.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    strncpy.o(.text) refers to rt_memclr.o(.text) for __rt_memclr
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_mkl05z4.o(.text) for __user_initial_stackheap
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to tempstk.o(.text) for __temporary_stack_top
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to __main.o(!!!main) for __main
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing gpio.o(.text), (0 bytes).
+    Removing gpio.o(.ARM.exidx.text.gpio_set_output), (8 bytes).
+    Removing gpio.o(.ARM.exidx.text.gpio_set_high), (8 bytes).
+    Removing gpio.o(.ARM.exidx.text.gpio_set_low), (8 bytes).
+    Removing gpio.o(.text.gpio_toggle), (8 bytes).
+    Removing gpio.o(.ARM.exidx.text.gpio_toggle), (8 bytes).
+    Removing spi.o(.text), (0 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_init), (8 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_master_write), (8 bytes).
+    Removing spi.o(.text.spi_slave_receive), (10 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_slave_receive), (8 bytes).
+    Removing spi.o(.text.spi_slave_read), (12 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_slave_read), (8 bytes).
+    Removing spi.o(.text.spi_slave_write), (24 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_slave_write), (8 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_writeable), (8 bytes).
+    Removing spi.o(.ARM.exidx.text.spi_readable), (8 bytes).
+    Removing fonts.o(.text), (0 bytes).
+    Removing fonts.o(.rodata.block_bitmap), (5 bytes).
+    Removing fonts.o(.rodata.block_bitmap_5), (25 bytes).
+    Removing fonts.o(.rodata.block_bitmap_6), (25 bytes).
+    Removing fonts.o(.rodata.block_bitmap_stone), (25 bytes).
+    Removing fonts.o(.rodata.block_bitmap_steel), (25 bytes).
+    Removing fonts.o(.rodata.block_bitmap_wood), (25 bytes).
+    Removing fonts.o(.rodata.block_bitmap_shaded), (25 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_1), (5 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_2), (5 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_3), (5 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_4), (5 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_5), (5 bytes).
+    Removing fonts.o(.rodata.block_animation_frame_6), (5 bytes).
+    Removing fonts.o(.rodata.c_chFont1624), (192 bytes).
+    Removing fonts.o(.rodata.c_chFont1608), (1520 bytes).
+    Removing fonts.o(.rodata.c_chFont1612), (352 bytes).
+    Removing fonts.o(.rodata.c_chFont3216), (704 bytes).
+    Removing fonts.o(.rodata.c_chBmp4016), (96 bytes).
+    Removing fonts.o(.rodata.c_chSingal816), (16 bytes).
+    Removing fonts.o(.rodata.c_chMsg816), (16 bytes).
+    Removing fonts.o(.rodata.c_chBat816), (16 bytes).
+    Removing fonts.o(.rodata.c_chBluetooth88), (8 bytes).
+    Removing fonts.o(.rodata.c_chGPRS88), (8 bytes).
+    Removing fonts.o(.rodata.c_chAlarm88), (8 bytes).
+    Removing oled.o(.text), (0 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_display_startup_message), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_clear_screen), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_display_char), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_display_string), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_refresh_gram), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_write_byte), (8 bytes).
+    Removing oled.o(.text.ssd1306_display_on), (30 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_display_on), (8 bytes).
+    Removing oled.o(.text.ssd1306_display_off), (30 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_display_off), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_draw_point), (8 bytes).
+    Removing oled.o(.text.ssd1306_draw_string_custom), (96 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_draw_string_custom), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.draw_bitmap), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_init), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_set_framerate), (8 bytes).
+    Removing oled.o(.text.ssd1306_set_orientation), (40 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_set_orientation), (8 bytes).
+    Removing oled.o(.text.ssd1306_set_addressing_mode), (24 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_set_addressing_mode), (8 bytes).
+    Removing oled.o(.text.clear_bitmap), (10 bytes).
+    Removing oled.o(.ARM.exidx.text.clear_bitmap), (8 bytes).
+    Removing oled.o(.text.ssd1306_get_pixel), (40 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_get_pixel), (8 bytes).
+    Removing oled.o(.text.ssd1306_set_pixel), (60 bytes).
+    Removing oled.o(.ARM.exidx.text.ssd1306_set_pixel), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.draw_digit), (8 bytes).
+    Removing oled.o(.ARM.exidx.text.draw_number), (8 bytes).
+    Removing tsi.o(.text), (0 bytes).
+    Removing tsi.o(.ARM.exidx.text.TSI_Init), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.self_calibration), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.TSI_ReadSlider), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.change_electrode), (8 bytes).
+    Removing tsi.o(.ARM.exidx.text.TSI0_IRQHandler), (8 bytes).
+    Removing arkanoid.o(.text), (0 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.convert_map), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.load_next_map), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.reset_ball), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.ball_update), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.start_ball_after_delay), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.check_collision), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.handle_block_collision), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.check_map_complete), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.paddle_update), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.get_lives), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.get_score), (8 bytes).
+    Removing arkanoid.o(.ARM.exidx.text.game_init), (8 bytes).
+    Removing maps.o(.text), (0 bytes).
+    Removing scores.o(.text), (0 bytes).
+    Removing scores.o(.ARM.exidx.text.update_top_scores), (8 bytes).
+    Removing scores.o(.ARM.exidx.text.get_top_scores), (8 bytes).
+    Removing game.o(.text), (0 bytes).
+    Removing game.o(.ARM.exidx.text.start_game), (8 bytes).
+    Removing game_draw.o(.text), (0 bytes).
+    Removing game_draw.o(.ARM.exidx.text.draw_paddle), (8 bytes).
+    Removing game_draw.o(.ARM.exidx.text.draw_ball), (8 bytes).
+    Removing game_draw.o(.ARM.exidx.text.draw_block), (8 bytes).
+    Removing game_draw.o(.ARM.exidx.text.draw_blocks), (8 bytes).
+    Removing game_draw.o(.ARM.exidx.text.draw_game), (8 bytes).
+    Removing game_draw.o(.ARM.exidx.text.game_over_display), (8 bytes).
+    Removing menu.o(.text), (0 bytes).
+    Removing menu.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing menu.o(.text.millis), (12 bytes).
+    Removing menu.o(.ARM.exidx.text.millis), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.setup_systick), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.SysTick_Config), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.wait_for_key_release), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.debounce_delay), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.show_score_board), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.enter_username), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.show_oled_options), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.show_menu), (8 bytes).
+    Removing menu.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing keyboard.o(.text), (0 bytes).
+    Removing keyboard.o(.ARM.exidx.text.Keyboard_Init), (8 bytes).
+    Removing keyboard.o(.ARM.exidx.text.Keyboard_ReadKey), (8 bytes).
+    Removing system_mkl05z4.o(.text), (0 bytes).
+    Removing system_mkl05z4.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_mkl05z4.o(.text.SystemCoreClockUpdate), (184 bytes).
+    Removing system_mkl05z4.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+
+129 unused section(s) (total 4313 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strncpy.o ABSOLUTE
+    ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    Fonts.c                                  0x00000000   Number         0  fonts.o ABSOLUTE
+    RTE/Device/MKL05Z32xxx4/startup_MKL05Z4.s 0x00000000   Number         0  startup_mkl05z4.o ABSOLUTE
+    arkanoid.c                               0x00000000   Number         0  arkanoid.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    game.c                                   0x00000000   Number         0  game.o ABSOLUTE
+    game_draw.c                              0x00000000   Number         0  game_draw.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    keyboard.c                               0x00000000   Number         0  keyboard.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    maps.c                                   0x00000000   Number         0  maps.o ABSOLUTE
+    menu.c                                   0x00000000   Number         0  menu.o ABSOLUTE
+    oled.c                                   0x00000000   Number         0  oled.o ABSOLUTE
+    scores.c                                 0x00000000   Number         0  scores.o ABSOLUTE
+    spi.c                                    0x00000000   Number         0  spi.o ABSOLUTE
+    system_MKL05Z4.c                         0x00000000   Number         0  system_mkl05z4.o ABSOLUTE
+    tsi.c                                    0x00000000   Number         0  tsi.o ABSOLUTE
+    RESET                                    0x00000000   Section      192  startup_mkl05z4.o(RESET)
+    !!!main                                  0x000000c0   Section        8  __main.o(!!!main)
+    !!!scatter                               0x000000c8   Section       60  __scatter.o(!!!scatter)
+    !!handler_copy                           0x00000104   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x00000120   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x0000013c   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x0000013e   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x00000140   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x00000142   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x00000144   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000144   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000144   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0000014a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0000014a   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0000014e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0000014e   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x00000156   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x00000158   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x00000158   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x0000015c   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x00000164   Section       52  startup_mkl05z4.o(.text)
+    .text                                    0x00000198   Section        0  strncpy.o(.text)
+    .text                                    0x00000204   Section      504  aeabi_sdivfast.o(.text)
+    .text                                    0x000003fc   Section        2  use_no_semi.o(.text)
+    .text                                    0x000003fe   Section        0  indicate_semi.o(.text)
+    .ARM.__at_0x400                          0x00000400   Section       16  startup_mkl05z4.o(.ARM.__at_0x400)
+    .text                                    0x00000410   Section        0  heapauxi.o(.text)
+    .text                                    0x00000416   Section        0  rt_memclr.o(.text)
+    .text                                    0x00000456   Section       62  sys_stackheap_outer.o(.text)
+    .text                                    0x00000494   Section        0  exit.o(.text)
+    .text                                    0x000004a4   Section        8  libspace.o(.text)
+    .text                                    0x000004ac   Section        0  sys_exit.o(.text)
+    [Anonymous Symbol]                       0x000004b8   Section        0  keyboard.o(.text.Keyboard_Init)
+    __arm_cp.0_1                             0x000004f0   Number         4  keyboard.o(.text.Keyboard_Init)
+    __arm_cp.0_2                             0x000004f4   Number         4  keyboard.o(.text.Keyboard_Init)
+    [Anonymous Symbol]                       0x000004f8   Section        0  keyboard.o(.text.Keyboard_ReadKey)
+    __arm_cp.1_0                             0x00000554   Number         4  keyboard.o(.text.Keyboard_ReadKey)
+    __arm_cp.1_1                             0x00000558   Number         4  keyboard.o(.text.Keyboard_ReadKey)
+    SysTick_Config                           0x00000561   Thumb Code    28  menu.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x00000560   Section        0  menu.o(.text.SysTick_Config)
+    __arm_cp.3_0                             0x0000057c   Number         4  menu.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x00000580   Section        0  menu.o(.text.SysTick_Handler)
+    __arm_cp.0_0                             0x000005a4   Number         4  menu.o(.text.SysTick_Handler)
+    __arm_cp.0_1                             0x000005a8   Number         4  menu.o(.text.SysTick_Handler)
+    __arm_cp.0_2                             0x000005ac   Number         4  menu.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x000005b0   Section        0  system_mkl05z4.o(.text.SystemInit)
+    __arm_cp.0_0                             0x000005ec   Number         4  system_mkl05z4.o(.text.SystemInit)
+    __arm_cp.0_1                             0x000005f0   Number         4  system_mkl05z4.o(.text.SystemInit)
+    __arm_cp.0_2                             0x000005f4   Number         4  system_mkl05z4.o(.text.SystemInit)
+    __arm_cp.0_3                             0x000005f8   Number         4  system_mkl05z4.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x000005fc   Section        0  tsi.o(.text.TSI0_IRQHandler)
+    [Anonymous Symbol]                       0x00000610   Section        0  tsi.o(.text.TSI_Init)
+    __arm_cp.0_0                             0x0000064c   Number         4  tsi.o(.text.TSI_Init)
+    __arm_cp.0_1                             0x00000650   Number         4  tsi.o(.text.TSI_Init)
+    __arm_cp.0_2                             0x00000654   Number         4  tsi.o(.text.TSI_Init)
+    __arm_cp.0_3                             0x00000658   Number         4  tsi.o(.text.TSI_Init)
+    __arm_cp.0_4                             0x0000065c   Number         4  tsi.o(.text.TSI_Init)
+    [Anonymous Symbol]                       0x00000660   Section        0  tsi.o(.text.TSI_ReadSlider)
+    __NVIC_ClearPendingIRQ                   0x000006b5   Thumb Code    12  tsi.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x000006b4   Section        0  tsi.o(.text.__NVIC_ClearPendingIRQ)
+    __arm_cp.2_0                             0x000006c0   Number         4  tsi.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_EnableIRQ                         0x000006c5   Thumb Code    12  tsi.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x000006c4   Section        0  tsi.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.3_0                             0x000006d0   Number         4  tsi.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x000006d5   Thumb Code    20  tsi.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x000006d4   Section        0  tsi.o(.text.__NVIC_SetPriority)
+    __arm_cp.1_0                             0x000006e8   Number         4  tsi.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x000006ed   Thumb Code    20  menu.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x000006ec   Section        0  menu.o(.text.__NVIC_SetPriority)
+    __arm_cp.10_0                            0x00000700   Number         4  menu.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x00000704   Section        0  arkanoid.o(.text.ball_update)
+    __arm_cp.3_0                             0x000007cc   Number         4  arkanoid.o(.text.ball_update)
+    __arm_cp.3_2                             0x000007d0   Number         4  arkanoid.o(.text.ball_update)
+    [Anonymous Symbol]                       0x000007d4   Section        0  tsi.o(.text.change_electrode)
+    __arm_cp.6_0                             0x00000820   Number         4  tsi.o(.text.change_electrode)
+    __arm_cp.6_1                             0x00000824   Number         4  tsi.o(.text.change_electrode)
+    __arm_cp.6_2                             0x00000828   Number         4  tsi.o(.text.change_electrode)
+    __arm_cp.6_3                             0x0000082c   Number         4  tsi.o(.text.change_electrode)
+    __arm_cp.6_4                             0x00000830   Number         4  tsi.o(.text.change_electrode)
+    __arm_cp.6_5                             0x00000834   Number         4  tsi.o(.text.change_electrode)
+    [Anonymous Symbol]                       0x00000838   Section        0  arkanoid.o(.text.check_collision)
+    [Anonymous Symbol]                       0x000008a0   Section        0  arkanoid.o(.text.check_map_complete)
+    [Anonymous Symbol]                       0x000008d8   Section        0  arkanoid.o(.text.convert_map)
+    [Anonymous Symbol]                       0x0000091c   Section        0  menu.o(.text.debounce_delay)
+    __arm_cp.5_0                             0x0000093c   Number         4  menu.o(.text.debounce_delay)
+    [Anonymous Symbol]                       0x00000940   Section        0  game_draw.o(.text.draw_ball)
+    __arm_cp.1_0                             0x00000958   Number         4  game_draw.o(.text.draw_ball)
+    [Anonymous Symbol]                       0x0000095c   Section        0  oled.o(.text.draw_bitmap)
+    [Anonymous Symbol]                       0x000009b4   Section        0  game_draw.o(.text.draw_block)
+    __arm_cp.2_0                             0x000009e8   Number         4  game_draw.o(.text.draw_block)
+    __arm_cp.2_1                             0x000009ec   Number         4  game_draw.o(.text.draw_block)
+    __arm_cp.2_2                             0x000009f0   Number         4  game_draw.o(.text.draw_block)
+    __arm_cp.2_3                             0x000009f4   Number         4  game_draw.o(.text.draw_block)
+    [Anonymous Symbol]                       0x000009f8   Section        0  game_draw.o(.text.draw_blocks)
+    __arm_cp.3_0                             0x00000a18   Number         4  game_draw.o(.text.draw_blocks)
+    [Anonymous Symbol]                       0x00000a1c   Section        0  oled.o(.text.draw_digit)
+    __arm_cp.18_0                            0x00000a38   Number         4  oled.o(.text.draw_digit)
+    [Anonymous Symbol]                       0x00000a3c   Section        0  game_draw.o(.text.draw_game)
+    __arm_cp.4_0                             0x00000aa0   Number         4  game_draw.o(.text.draw_game)
+    __arm_cp.4_1                             0x00000aa4   Number         4  game_draw.o(.text.draw_game)
+    [Anonymous Symbol]                       0x00000aa8   Section        0  oled.o(.text.draw_number)
+    [Anonymous Symbol]                       0x00000b00   Section        0  game_draw.o(.text.draw_paddle)
+    __arm_cp.0_0                             0x00000b18   Number         4  game_draw.o(.text.draw_paddle)
+    [Anonymous Symbol]                       0x00000b1c   Section        0  menu.o(.text.enter_username)
+    __arm_cp.7_0                             0x00000cac   Number         4  menu.o(.text.enter_username)
+    [Anonymous Symbol]                       0x00000cc0   Section        0  arkanoid.o(.text.game_init)
+    [Anonymous Symbol]                       0x00000cd8   Section        0  game_draw.o(.text.game_over_display)
+    __arm_cp.5_2                             0x00000d48   Number         4  game_draw.o(.text.game_over_display)
+    [Anonymous Symbol]                       0x00000d4c   Section        0  arkanoid.o(.text.get_lives)
+    __arm_cp.9_0                             0x00000d54   Number         4  arkanoid.o(.text.get_lives)
+    [Anonymous Symbol]                       0x00000d58   Section        0  arkanoid.o(.text.get_score)
+    [Anonymous Symbol]                       0x00000d60   Section        0  scores.o(.text.get_top_scores)
+    __arm_cp.1_0                             0x00000d64   Number         4  scores.o(.text.get_top_scores)
+    [Anonymous Symbol]                       0x00000d68   Section        0  gpio.o(.text.gpio_set_high)
+    [Anonymous Symbol]                       0x00000d70   Section        0  gpio.o(.text.gpio_set_low)
+    [Anonymous Symbol]                       0x00000d78   Section        0  gpio.o(.text.gpio_set_output)
+    __arm_cp.0_0                             0x00000da8   Number         4  gpio.o(.text.gpio_set_output)
+    __arm_cp.0_1                             0x00000dac   Number         4  gpio.o(.text.gpio_set_output)
+    __arm_cp.0_2                             0x00000db0   Number         4  gpio.o(.text.gpio_set_output)
+    [Anonymous Symbol]                       0x00000db4   Section        0  arkanoid.o(.text.handle_block_collision)
+    __arm_cp.6_0                             0x00000dd0   Number         4  arkanoid.o(.text.handle_block_collision)
+    [Anonymous Symbol]                       0x00000dd4   Section        0  arkanoid.o(.text.load_next_map)
+    __arm_cp.1_0                             0x00000df8   Number         4  arkanoid.o(.text.load_next_map)
+    __arm_cp.1_1                             0x00000dfc   Number         4  arkanoid.o(.text.load_next_map)
+    [Anonymous Symbol]                       0x00000e00   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x00000e0a   Section        0  arkanoid.o(.text.paddle_update)
+    [Anonymous Symbol]                       0x00000e1c   Section        0  arkanoid.o(.text.reset_ball)
+    __arm_cp.2_0                             0x00000e38   Number         4  arkanoid.o(.text.reset_ball)
+    [Anonymous Symbol]                       0x00000e3c   Section        0  tsi.o(.text.self_calibration)
+    __arm_cp.4_0                             0x00000ed4   Number         4  tsi.o(.text.self_calibration)
+    __arm_cp.4_1                             0x00000ed8   Number         4  tsi.o(.text.self_calibration)
+    __arm_cp.4_2                             0x00000edc   Number         4  tsi.o(.text.self_calibration)
+    [Anonymous Symbol]                       0x00000ee0   Section        0  menu.o(.text.setup_systick)
+    __arm_cp.2_0                             0x00000ef4   Number         4  menu.o(.text.setup_systick)
+    [Anonymous Symbol]                       0x00000ef8   Section        0  menu.o(.text.show_menu)
+    __arm_cp.9_0                             0x00000fc8   Number         4  menu.o(.text.show_menu)
+    __arm_cp.9_1                             0x00000fcc   Number         4  menu.o(.text.show_menu)
+    __arm_cp.9_4                             0x00000fd0   Number         4  menu.o(.text.show_menu)
+    [Anonymous Symbol]                       0x00000fd4   Section        0  menu.o(.text.show_oled_options)
+    __arm_cp.8_0                             0x00001178   Number         4  menu.o(.text.show_oled_options)
+    __arm_cp.8_1                             0x0000117c   Number         4  menu.o(.text.show_oled_options)
+    __arm_cp.8_2                             0x00001180   Number         4  menu.o(.text.show_oled_options)
+    __arm_cp.8_4                             0x00001188   Number         4  menu.o(.text.show_oled_options)
+    __arm_cp.8_6                             0x00001190   Number         4  menu.o(.text.show_oled_options)
+    [Anonymous Symbol]                       0x00001194   Section        0  menu.o(.text.show_score_board)
+    __arm_cp.6_2                             0x0000125c   Number         4  menu.o(.text.show_score_board)
+    [Anonymous Symbol]                       0x00001260   Section        0  spi.o(.text.spi_init)
+    __arm_cp.0_0                             0x00001338   Number         4  spi.o(.text.spi_init)
+    __arm_cp.0_1                             0x0000133c   Number         4  spi.o(.text.spi_init)
+    __arm_cp.0_2                             0x00001340   Number         4  spi.o(.text.spi_init)
+    __arm_cp.0_3                             0x00001344   Number         4  spi.o(.text.spi_init)
+    __arm_cp.0_4                             0x00001348   Number         4  spi.o(.text.spi_init)
+    [Anonymous Symbol]                       0x0000134c   Section        0  spi.o(.text.spi_master_write)
+    __arm_cp.1_0                             0x00001368   Number         4  spi.o(.text.spi_master_write)
+    spi_readable                             0x0000136d   Thumb Code     8  spi.o(.text.spi_readable)
+    [Anonymous Symbol]                       0x0000136c   Section        0  spi.o(.text.spi_readable)
+    spi_writeable                            0x00001375   Thumb Code    12  spi.o(.text.spi_writeable)
+    [Anonymous Symbol]                       0x00001374   Section        0  spi.o(.text.spi_writeable)
+    __arm_cp.5_0                             0x00001380   Number         4  spi.o(.text.spi_writeable)
+    [Anonymous Symbol]                       0x00001384   Section        0  oled.o(.text.ssd1306_clear_screen)
+    [Anonymous Symbol]                       0x000013a4   Section        0  oled.o(.text.ssd1306_display_char)
+    __arm_cp.2_0                             0x00001420   Number         4  oled.o(.text.ssd1306_display_char)
+    [Anonymous Symbol]                       0x00001424   Section        0  oled.o(.text.ssd1306_display_startup_message)
+    __arm_cp.0_2                             0x0000149c   Number         4  oled.o(.text.ssd1306_display_startup_message)
+    [Anonymous Symbol]                       0x000014a0   Section        0  oled.o(.text.ssd1306_display_string)
+    [Anonymous Symbol]                       0x00001508   Section        0  oled.o(.text.ssd1306_draw_point)
+    [Anonymous Symbol]                       0x0000153c   Section        0  oled.o(.text.ssd1306_init)
+    __arm_cp.11_0                            0x0000167c   Number         4  oled.o(.text.ssd1306_init)
+    __arm_cp.11_1                            0x00001680   Number         4  oled.o(.text.ssd1306_init)
+    __arm_cp.11_2                            0x00001684   Number         4  oled.o(.text.ssd1306_init)
+    __arm_cp.11_3                            0x00001688   Number         4  oled.o(.text.ssd1306_init)
+    [Anonymous Symbol]                       0x0000168c   Section        0  oled.o(.text.ssd1306_refresh_gram)
+    __arm_cp.4_0                             0x000016d4   Number         4  oled.o(.text.ssd1306_refresh_gram)
+    [Anonymous Symbol]                       0x000016d8   Section        0  oled.o(.text.ssd1306_set_framerate)
+    [Anonymous Symbol]                       0x000016f0   Section        0  oled.o(.text.ssd1306_write_byte)
+    __arm_cp.5_0                             0x00001728   Number         4  oled.o(.text.ssd1306_write_byte)
+    start_ball_after_delay                   0x0000172d   Thumb Code    44  arkanoid.o(.text.start_ball_after_delay)
+    [Anonymous Symbol]                       0x0000172c   Section        0  arkanoid.o(.text.start_ball_after_delay)
+    __arm_cp.4_0                             0x00001758   Number         4  arkanoid.o(.text.start_ball_after_delay)
+    __arm_cp.4_1                             0x0000175c   Number         4  arkanoid.o(.text.start_ball_after_delay)
+    [Anonymous Symbol]                       0x00001760   Section        0  game.o(.text.start_game)
+    __arm_cp.0_0                             0x000017fc   Number         4  game.o(.text.start_game)
+    __arm_cp.0_1                             0x00001800   Number         4  game.o(.text.start_game)
+    __arm_cp.0_2                             0x00001804   Number         4  game.o(.text.start_game)
+    __arm_cp.0_3                             0x00001808   Number         4  game.o(.text.start_game)
+    [Anonymous Symbol]                       0x0000180c   Section        0  scores.o(.text.update_top_scores)
+    __arm_cp.0_0                             0x00001860   Number         4  scores.o(.text.update_top_scores)
+    [Anonymous Symbol]                       0x00001864   Section        0  menu.o(.text.wait_for_key_release)
+    .text_divfast                            0x00001870   Section      502  aeabi_sdivfast.o(.text_divfast)
+    elec_array                               0x00001f4e   Data           2  tsi.o(.rodata.elec_array)
+    [Anonymous Symbol]                       0x00001f4e   Section        0  tsi.o(.rodata.elec_array)
+    [Anonymous Symbol]                       0x00002f4c   Section        0  menu.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00002f93   Section        0  keyboard.o(.rodata.str1.1)
+    top_scores                               0x1ffffc5c   Data          36  scores.o(.data.top_scores)
+    [Anonymous Symbol]                       0x1ffffc5c   Section        0  scores.o(.data.top_scores)
+    .bss                                     0x1ffffc88   Section       96  libspace.o(.bss)
+    ball_is_reset                            0x1ffffce8   Data           1  arkanoid.o(.bss.ball_is_reset)
+    [Anonymous Symbol]                       0x1ffffce8   Section        0  arkanoid.o(.bss.ball_is_reset)
+    end_flag                                 0x1ffffd98   Data           1  tsi.o(.bss.end_flag)
+    [Anonymous Symbol]                       0x1ffffd98   Section        0  tsi.o(.bss.end_flag)
+    gu16Baseline                             0x1ffffd9a   Data           4  tsi.o(.bss.gu16Baseline)
+    [Anonymous Symbol]                       0x1ffffd9a   Section        0  tsi.o(.bss.gu16Baseline)
+    gu16Delta                                0x1ffffd9e   Data           4  tsi.o(.bss.gu16Delta)
+    [Anonymous Symbol]                       0x1ffffd9e   Section        0  tsi.o(.bss.gu16Delta)
+    ongoing_elec                             0x1ffffda2   Data           1  tsi.o(.bss.ongoing_elec)
+    [Anonymous Symbol]                       0x1ffffda2   Section        0  tsi.o(.bss.ongoing_elec)
+    s_chDispalyBuffer                        0x1ffffda3   Data        1024  oled.o(.bss.s_chDispalyBuffer)
+    [Anonymous Symbol]                       0x1ffffda3   Section        0  oled.o(.bss.s_chDispalyBuffer)
+    Heap_Mem                                 0x200001a8   Data           0  startup_mkl05z4.o(HEAP)
+    Stack_Mem                                0x200001a8   Data         256  startup_mkl05z4.o(STACK)
+    HEAP                                     0x200001a8   Section        0  startup_mkl05z4.o(HEAP)
+    STACK                                    0x200001a8   Section      256  startup_mkl05z4.o(STACK)
+    __initial_sp                             0x200002a8   Data           0  startup_mkl05z4.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_mkl05z4.o(RESET)
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_mkl05z4.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_mkl05z4.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x000000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x000000c9   Thumb Code    52  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x000000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x000000d9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x00000105   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x00000121   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x0000013d   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x00000141   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x00000145   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000145   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000145   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0000014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0000014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0000014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0000014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x00000157   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x00000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x00000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x0000015d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x00000165   Thumb Code     8  startup_mkl05z4.o(.text)
+    NMI_Handler                              0x0000016d   Thumb Code     2  startup_mkl05z4.o(.text)
+    HardFault_Handler                        0x0000016f   Thumb Code     2  startup_mkl05z4.o(.text)
+    SVC_Handler                              0x00000171   Thumb Code     2  startup_mkl05z4.o(.text)
+    PendSV_Handler                           0x00000173   Thumb Code     2  startup_mkl05z4.o(.text)
+    ADC0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    CMP0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DAC0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DMA0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DMA1_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DMA2_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DMA3_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    DefaultISR                               0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    FTFA_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    I2C0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    LLW_IRQHandler                           0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    LPTimer_IRQHandler                       0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    LVD_LVW_IRQHandler                       0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    MCG_IRQHandler                           0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    PIT_IRQHandler                           0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    PORTA_IRQHandler                         0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    PORTB_IRQHandler                         0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    RTC_IRQHandler                           0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    RTC_Seconds_IRQHandler                   0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved20_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved25_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved27_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved29_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved30_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved35_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved39_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved40_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    Reserved45_IRQHandler                    0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    SPI0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    TPM0_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    TPM1_IRQHandler                          0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    UART0_IRQHandler                         0x00000177   Thumb Code     0  startup_mkl05z4.o(.text)
+    __user_initial_stackheap                 0x00000179   Thumb Code     0  startup_mkl05z4.o(.text)
+    strncpy                                  0x00000199   Thumb Code   104  strncpy.o(.text)
+    __aeabi_uidivmod                         0x00000205   Thumb Code    28  aeabi_sdivfast.o(.text)
+    __aeabi_idivmod                          0x00000221   Thumb Code   472  aeabi_sdivfast.o(.text)
+    __I$use$semihosting                      0x000003fd   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x000003fd   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x000003ff   Thumb Code     0  indicate_semi.o(.text)
+    ball_bitmap                              0x000003fe   Data           2  fonts.o(.rodata.ball_bitmap)
+    __use_two_region_memory                  0x00000411   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00000413   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00000415   Thumb Code     2  heapauxi.o(.text)
+    _memset_w                                0x00000417   Thumb Code    26  rt_memclr.o(.text)
+    _memset                                  0x00000431   Thumb Code    30  rt_memclr.o(.text)
+    __aeabi_memclr                           0x0000044f   Thumb Code     4  rt_memclr.o(.text)
+    __rt_memclr                              0x0000044f   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr4                          0x00000453   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr8                          0x00000453   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr_w                            0x00000453   Thumb Code     4  rt_memclr.o(.text)
+    __user_setup_stackheap                   0x00000457   Thumb Code    62  sys_stackheap_outer.o(.text)
+    exit                                     0x00000495   Thumb Code    16  exit.o(.text)
+    __user_libspace                          0x000004a5   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000004a5   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000004a5   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x000004ad   Thumb Code     8  sys_exit.o(.text)
+    Keyboard_Init                            0x000004b9   Thumb Code    56  keyboard.o(.text.Keyboard_Init)
+    Keyboard_ReadKey                         0x000004f9   Thumb Code    92  keyboard.o(.text.Keyboard_ReadKey)
+    SysTick_Handler                          0x00000581   Thumb Code    36  menu.o(.text.SysTick_Handler)
+    SystemInit                               0x000005b1   Thumb Code    60  system_mkl05z4.o(.text.SystemInit)
+    TSI0_IRQHandler                          0x000005fd   Thumb Code    20  tsi.o(.text.TSI0_IRQHandler)
+    TSI_Init                                 0x00000611   Thumb Code    60  tsi.o(.text.TSI_Init)
+    TSI_ReadSlider                           0x00000661   Thumb Code    84  tsi.o(.text.TSI_ReadSlider)
+    ball_update                              0x00000705   Thumb Code   200  arkanoid.o(.text.ball_update)
+    change_electrode                         0x000007d5   Thumb Code    76  tsi.o(.text.change_electrode)
+    check_collision                          0x00000839   Thumb Code   102  arkanoid.o(.text.check_collision)
+    check_map_complete                       0x000008a1   Thumb Code    56  arkanoid.o(.text.check_map_complete)
+    convert_map                              0x000008d9   Thumb Code    68  arkanoid.o(.text.convert_map)
+    debounce_delay                           0x0000091d   Thumb Code    32  menu.o(.text.debounce_delay)
+    draw_ball                                0x00000941   Thumb Code    24  game_draw.o(.text.draw_ball)
+    draw_bitmap                              0x0000095d   Thumb Code    88  oled.o(.text.draw_bitmap)
+    draw_block                               0x000009b5   Thumb Code    52  game_draw.o(.text.draw_block)
+    draw_blocks                              0x000009f9   Thumb Code    32  game_draw.o(.text.draw_blocks)
+    draw_digit                               0x00000a1d   Thumb Code    28  oled.o(.text.draw_digit)
+    draw_game                                0x00000a3d   Thumb Code   100  game_draw.o(.text.draw_game)
+    draw_number                              0x00000aa9   Thumb Code    88  oled.o(.text.draw_number)
+    draw_paddle                              0x00000b01   Thumb Code    24  game_draw.o(.text.draw_paddle)
+    enter_username                           0x00000b1d   Thumb Code   400  menu.o(.text.enter_username)
+    game_init                                0x00000cc1   Thumb Code    24  arkanoid.o(.text.game_init)
+    game_over_display                        0x00000cd9   Thumb Code    92  game_draw.o(.text.game_over_display)
+    get_lives                                0x00000d4d   Thumb Code     8  arkanoid.o(.text.get_lives)
+    get_score                                0x00000d59   Thumb Code     8  arkanoid.o(.text.get_score)
+    get_top_scores                           0x00000d61   Thumb Code     4  scores.o(.text.get_top_scores)
+    gpio_set_high                            0x00000d69   Thumb Code     8  gpio.o(.text.gpio_set_high)
+    gpio_set_low                             0x00000d71   Thumb Code     8  gpio.o(.text.gpio_set_low)
+    gpio_set_output                          0x00000d79   Thumb Code    48  gpio.o(.text.gpio_set_output)
+    handle_block_collision                   0x00000db5   Thumb Code    28  arkanoid.o(.text.handle_block_collision)
+    load_next_map                            0x00000dd5   Thumb Code    36  arkanoid.o(.text.load_next_map)
+    main                                     0x00000e01   Thumb Code    10  main.o(.text.main)
+    paddle_update                            0x00000e0b   Thumb Code    18  arkanoid.o(.text.paddle_update)
+    reset_ball                               0x00000e1d   Thumb Code    28  arkanoid.o(.text.reset_ball)
+    self_calibration                         0x00000e3d   Thumb Code   152  tsi.o(.text.self_calibration)
+    setup_systick                            0x00000ee1   Thumb Code    20  menu.o(.text.setup_systick)
+    show_menu                                0x00000ef9   Thumb Code   208  menu.o(.text.show_menu)
+    show_oled_options                        0x00000fd5   Thumb Code   420  menu.o(.text.show_oled_options)
+    show_score_board                         0x00001195   Thumb Code   172  menu.o(.text.show_score_board)
+    spi_init                                 0x00001261   Thumb Code   216  spi.o(.text.spi_init)
+    spi_master_write                         0x0000134d   Thumb Code    28  spi.o(.text.spi_master_write)
+    ssd1306_clear_screen                     0x00001385   Thumb Code    32  oled.o(.text.ssd1306_clear_screen)
+    ssd1306_display_char                     0x000013a5   Thumb Code   124  oled.o(.text.ssd1306_display_char)
+    ssd1306_display_startup_message          0x00001425   Thumb Code    96  oled.o(.text.ssd1306_display_startup_message)
+    ssd1306_display_string                   0x000014a1   Thumb Code   104  oled.o(.text.ssd1306_display_string)
+    ssd1306_draw_point                       0x00001509   Thumb Code    52  oled.o(.text.ssd1306_draw_point)
+    ssd1306_init                             0x0000153d   Thumb Code   320  oled.o(.text.ssd1306_init)
+    ssd1306_refresh_gram                     0x0000168d   Thumb Code    72  oled.o(.text.ssd1306_refresh_gram)
+    ssd1306_set_framerate                    0x000016d9   Thumb Code    24  oled.o(.text.ssd1306_set_framerate)
+    ssd1306_write_byte                       0x000016f1   Thumb Code    56  oled.o(.text.ssd1306_write_byte)
+    start_game                               0x00001761   Thumb Code   156  game.o(.text.start_game)
+    update_top_scores                        0x0000180d   Thumb Code    84  scores.o(.text.update_top_scores)
+    wait_for_key_release                     0x00001865   Thumb Code    12  menu.o(.text.wait_for_key_release)
+    __aeabi_uidiv                            0x00001871   Thumb Code    68  aeabi_sdivfast.o(.text_divfast)
+    __aeabi_idiv                             0x000018b5   Thumb Code   434  aeabi_sdivfast.o(.text_divfast)
+    block_bitmap_1                           0x00001a66   Data          25  fonts.o(.rodata.block_bitmap_1)
+    block_bitmap_2                           0x00001a7f   Data          25  fonts.o(.rodata.block_bitmap_2)
+    block_bitmap_3                           0x00001a98   Data          25  fonts.o(.rodata.block_bitmap_3)
+    block_bitmap_4                           0x00001ab1   Data          25  fonts.o(.rodata.block_bitmap_4)
+    block_bitmap_arrow                       0x00001aca   Data           8  fonts.o(.rodata.block_bitmap_arrow)
+    block_bitmap_heart                       0x00001ad2   Data           8  fonts.o(.rodata.block_bitmap_heart)
+    c_chFont1206                             0x00001ada   Data        1140  fonts.o(.rodata.c_chFont1206)
+    font_digits                              0x00001f50   Data          80  fonts.o(.rodata.font_digits)
+    maps                                     0x00001fa0   Data        4000  maps.o(.rodata.maps)
+    paddle_bitmap                            0x00002f40   Data           4  fonts.o(.rodata.paddle_bitmap)
+    star_bitmap                              0x00002f44   Data           8  fonts.o(.rodata.star_bitmap)
+    Region$$Table$$Base                      0x00002fac   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002fcc   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x1ffffc00   Data           4  system_mkl05z4.o(.data.SystemCoreClock)
+    game_speed                               0x1ffffc04   Data           4  arkanoid.o(.data.game_speed)
+    key_map                                  0x1ffffc08   Data          48  keyboard.o(.data.key_map)
+    lives                                    0x1ffffc38   Data           4  arkanoid.o(.data.lives)
+    menu_options                             0x1ffffc3c   Data          16  menu.o(.data.menu_options)
+    oled_options                             0x1ffffc4c   Data          16  menu.o(.data.oled_options)
+    user_nickname                            0x1ffffc80   Data           6  menu.o(.data.user_nickname)
+    __libspace_start                         0x1ffffc88   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x1ffffce8   Data           0  libspace.o(.bss)
+    blocks                                   0x1ffffce9   Data         160  arkanoid.o(.bss.blocks)
+    current_map                              0x1ffffd8c   Data           4  arkanoid.o(.bss.current_map)
+    current_score                            0x1ffffd90   Data           4  arkanoid.o(.bss.current_score)
+    czas                                     0x1ffffd94   Data           4  menu.o(.bss.czas)
+    sekunda                                  0x200001a3   Data           1  menu.o(.bss.sekunda)
+    sekunda_OK                               0x200001a4   Data           1  menu.o(.bss.sekunda_OK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000165
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00003054, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00002fcc, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO          305    RESET               startup_mkl05z4.o
+    0x000000c0   0x000000c0   0x00000008   Code   RO          342  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x0000003c   Code   RO          519    !!!scatter          c_p.l(__scatter.o)
+    0x00000104   0x00000104   0x0000001a   Code   RO          521    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x0000011e   0x0000011e   0x00000002   PAD
+    0x00000120   0x00000120   0x0000001c   Code   RO          523    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0000013c   0x0000013c   0x00000002   Code   RO          382    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          396    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          398    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          401    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          403    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          405    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          408    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          410    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          412    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          414    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          416    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          418    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          420    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          422    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          424    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          426    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          428    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          432    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          434    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          436    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO          438    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000002   Code   RO          439    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
+    0x00000140   0x00000140   0x00000002   Code   RO          474    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          502    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          504    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          507    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          510    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          512    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO          515    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000002   Code   RO          516    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x00000144   0x00000144   0x00000000   Code   RO          344    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x00000144   0x00000144   0x00000000   Code   RO          352    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x00000144   0x00000144   0x00000006   Code   RO          364    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO          354    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0000014a   0x0000014a   0x00000004   Code   RO          355    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO          357    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0000014e   0x0000014e   0x00000008   Code   RO          358    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000002   Code   RO          387    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000158   0x00000158   0x00000000   Code   RO          445    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000158   0x00000158   0x00000004   Code   RO          446    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x0000015c   0x0000015c   0x00000006   Code   RO          447    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000162   0x00000162   0x00000002   PAD
+    0x00000164   0x00000164   0x00000034   Code   RO          307  * .text               startup_mkl05z4.o
+    0x00000198   0x00000198   0x0000006c   Code   RO          330    .text               c_p.l(strncpy.o)
+    0x00000204   0x00000204   0x000001f8   Code   RO          332    .text               c_p.l(aeabi_sdivfast.o)
+    0x000003fc   0x000003fc   0x00000002   Code   RO          463    .text               c_p.l(use_no_semi.o)
+    0x000003fe   0x000003fe   0x00000000   Code   RO          465    .text               c_p.l(indicate_semi.o)
+    0x000003fe   0x000003fe   0x00000002   Data   RO           50    .rodata.ball_bitmap  fonts.o
+    0x00000400   0x00000400   0x00000010   Code   RO          306    .ARM.__at_0x400     startup_mkl05z4.o
+    0x00000410   0x00000410   0x00000006   Code   RO          340    .text               c_p.l(heapauxi.o)
+    0x00000416   0x00000416   0x00000040   Code   RO          349    .text               c_p.l(rt_memclr.o)
+    0x00000456   0x00000456   0x0000003e   Code   RO          368    .text               c_p.l(sys_stackheap_outer.o)
+    0x00000494   0x00000494   0x00000010   Code   RO          371    .text               c_p.l(exit.o)
+    0x000004a4   0x000004a4   0x00000008   Code   RO          383    .text               c_p.l(libspace.o)
+    0x000004ac   0x000004ac   0x0000000c   Code   RO          440    .text               c_p.l(sys_exit.o)
+    0x000004b8   0x000004b8   0x00000040   Code   RO          290    .text.Keyboard_Init  keyboard.o
+    0x000004f8   0x000004f8   0x00000068   Code   RO          292    .text.Keyboard_ReadKey  keyboard.o
+    0x00000560   0x00000560   0x00000020   Code   RO          259    .text.SysTick_Config  menu.o
+    0x00000580   0x00000580   0x00000030   Code   RO          253    .text.SysTick_Handler  menu.o
+    0x000005b0   0x000005b0   0x0000004c   Code   RO          316    .text.SystemInit    system_mkl05z4.o
+    0x000005fc   0x000005fc   0x00000014   Code   RO          152    .text.TSI0_IRQHandler  tsi.o
+    0x00000610   0x00000610   0x00000050   Code   RO          138    .text.TSI_Init      tsi.o
+    0x00000660   0x00000660   0x00000054   Code   RO          148    .text.TSI_ReadSlider  tsi.o
+    0x000006b4   0x000006b4   0x00000010   Code   RO          142    .text.__NVIC_ClearPendingIRQ  tsi.o
+    0x000006c4   0x000006c4   0x00000010   Code   RO          144    .text.__NVIC_EnableIRQ  tsi.o
+    0x000006d4   0x000006d4   0x00000018   Code   RO          140    .text.__NVIC_SetPriority  tsi.o
+    0x000006ec   0x000006ec   0x00000018   Code   RO          273    .text.__NVIC_SetPriority  menu.o
+    0x00000704   0x00000704   0x000000d0   Code   RO          173    .text.ball_update   arkanoid.o
+    0x000007d4   0x000007d4   0x00000064   Code   RO          150    .text.change_electrode  tsi.o
+    0x00000838   0x00000838   0x00000066   Code   RO          177    .text.check_collision  arkanoid.o
+    0x0000089e   0x0000089e   0x00000002   PAD
+    0x000008a0   0x000008a0   0x00000038   Code   RO          181    .text.check_map_complete  arkanoid.o
+    0x000008d8   0x000008d8   0x00000044   Code   RO          167    .text.convert_map   arkanoid.o
+    0x0000091c   0x0000091c   0x00000024   Code   RO          263    .text.debounce_delay  menu.o
+    0x00000940   0x00000940   0x0000001c   Code   RO          235    .text.draw_ball     game_draw.o
+    0x0000095c   0x0000095c   0x00000058   Code   RO          109    .text.draw_bitmap   oled.o
+    0x000009b4   0x000009b4   0x00000044   Code   RO          237    .text.draw_block    game_draw.o
+    0x000009f8   0x000009f8   0x00000024   Code   RO          239    .text.draw_blocks   game_draw.o
+    0x00000a1c   0x00000a1c   0x00000020   Code   RO          125    .text.draw_digit    oled.o
+    0x00000a3c   0x00000a3c   0x0000006c   Code   RO          241    .text.draw_game     game_draw.o
+    0x00000aa8   0x00000aa8   0x00000058   Code   RO          127    .text.draw_number   oled.o
+    0x00000b00   0x00000b00   0x0000001c   Code   RO          233    .text.draw_paddle   game_draw.o
+    0x00000b1c   0x00000b1c   0x000001a4   Code   RO          267    .text.enter_username  menu.o
+    0x00000cc0   0x00000cc0   0x00000018   Code   RO          189    .text.game_init     arkanoid.o
+    0x00000cd8   0x00000cd8   0x00000074   Code   RO          243    .text.game_over_display  game_draw.o
+    0x00000d4c   0x00000d4c   0x0000000c   Code   RO          185    .text.get_lives     arkanoid.o
+    0x00000d58   0x00000d58   0x00000008   Code   RO          187    .text.get_score     arkanoid.o
+    0x00000d60   0x00000d60   0x00000008   Code   RO          213    .text.get_top_scores  scores.o
+    0x00000d68   0x00000d68   0x00000008   Code   RO           13    .text.gpio_set_high  gpio.o
+    0x00000d70   0x00000d70   0x00000008   Code   RO           15    .text.gpio_set_low  gpio.o
+    0x00000d78   0x00000d78   0x0000003c   Code   RO           11    .text.gpio_set_output  gpio.o
+    0x00000db4   0x00000db4   0x00000020   Code   RO          179    .text.handle_block_collision  arkanoid.o
+    0x00000dd4   0x00000dd4   0x0000002c   Code   RO          169    .text.load_next_map  arkanoid.o
+    0x00000e00   0x00000e00   0x0000000a   Code   RO            2    .text.main          main.o
+    0x00000e0a   0x00000e0a   0x00000012   Code   RO          183    .text.paddle_update  arkanoid.o
+    0x00000e1c   0x00000e1c   0x00000020   Code   RO          171    .text.reset_ball    arkanoid.o
+    0x00000e3c   0x00000e3c   0x000000a4   Code   RO          146    .text.self_calibration  tsi.o
+    0x00000ee0   0x00000ee0   0x00000018   Code   RO          257    .text.setup_systick  menu.o
+    0x00000ef8   0x00000ef8   0x000000dc   Code   RO          271    .text.show_menu     menu.o
+    0x00000fd4   0x00000fd4   0x000001c0   Code   RO          269    .text.show_oled_options  menu.o
+    0x00001194   0x00001194   0x000000cc   Code   RO          265    .text.show_score_board  menu.o
+    0x00001260   0x00001260   0x000000ec   Code   RO           27    .text.spi_init      spi.o
+    0x0000134c   0x0000134c   0x00000020   Code   RO           29    .text.spi_master_write  spi.o
+    0x0000136c   0x0000136c   0x00000008   Code   RO           39    .text.spi_readable  spi.o
+    0x00001374   0x00001374   0x00000010   Code   RO           37    .text.spi_writeable  spi.o
+    0x00001384   0x00001384   0x00000020   Code   RO           91    .text.ssd1306_clear_screen  oled.o
+    0x000013a4   0x000013a4   0x00000080   Code   RO           93    .text.ssd1306_display_char  oled.o
+    0x00001424   0x00001424   0x0000007c   Code   RO           89    .text.ssd1306_display_startup_message  oled.o
+    0x000014a0   0x000014a0   0x00000068   Code   RO           95    .text.ssd1306_display_string  oled.o
+    0x00001508   0x00001508   0x00000034   Code   RO          105    .text.ssd1306_draw_point  oled.o
+    0x0000153c   0x0000153c   0x00000150   Code   RO          111    .text.ssd1306_init  oled.o
+    0x0000168c   0x0000168c   0x0000004c   Code   RO           97    .text.ssd1306_refresh_gram  oled.o
+    0x000016d8   0x000016d8   0x00000018   Code   RO          113    .text.ssd1306_set_framerate  oled.o
+    0x000016f0   0x000016f0   0x0000003c   Code   RO           99    .text.ssd1306_write_byte  oled.o
+    0x0000172c   0x0000172c   0x00000034   Code   RO          175    .text.start_ball_after_delay  arkanoid.o
+    0x00001760   0x00001760   0x000000ac   Code   RO          224    .text.start_game    game.o
+    0x0000180c   0x0000180c   0x00000058   Code   RO          211    .text.update_top_scores  scores.o
+    0x00001864   0x00001864   0x0000000c   Code   RO          261    .text.wait_for_key_release  menu.o
+    0x00001870   0x00001870   0x000001f6   Code   RO          333    .text_divfast       c_p.l(aeabi_sdivfast.o)
+    0x00001a66   0x00001a66   0x00000019   Data   RO           55    .rodata.block_bitmap_1  fonts.o
+    0x00001a7f   0x00001a7f   0x00000019   Data   RO           56    .rodata.block_bitmap_2  fonts.o
+    0x00001a98   0x00001a98   0x00000019   Data   RO           57    .rodata.block_bitmap_3  fonts.o
+    0x00001ab1   0x00001ab1   0x00000019   Data   RO           58    .rodata.block_bitmap_4  fonts.o
+    0x00001aca   0x00001aca   0x00000008   Data   RO           52    .rodata.block_bitmap_arrow  fonts.o
+    0x00001ad2   0x00001ad2   0x00000008   Data   RO           53    .rodata.block_bitmap_heart  fonts.o
+    0x00001ada   0x00001ada   0x00000474   Data   RO           73    .rodata.c_chFont1206  fonts.o
+    0x00001f4e   0x00001f4e   0x00000002   Data   RO          156    .rodata.elec_array  tsi.o
+    0x00001f50   0x00001f50   0x00000050   Data   RO           72    .rodata.font_digits  fonts.o
+    0x00001fa0   0x00001fa0   0x00000fa0   Data   RO          205    .rodata.maps        maps.o
+    0x00002f40   0x00002f40   0x00000004   Data   RO           49    .rodata.paddle_bitmap  fonts.o
+    0x00002f44   0x00002f44   0x00000008   Data   RO           54    .rodata.star_bitmap  fonts.o
+    0x00002f4c   0x00002f4c   0x00000047   Data   RO          275    .rodata.str1.1      menu.o
+    0x00002f93   0x00002f93   0x00000018   Data   RO          294    .rodata.str1.1      keyboard.o
+    0x00002fab   0x00002fab   0x00000001   PAD
+    0x00002fac   0x00002fac   0x00000020   Data   RO          518    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x1ffffc00, Load base: 0x00002fcc, Size: 0x00000088, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1ffffc00   0x00002fcc   0x00000004   Data   RW          320    .data.SystemCoreClock  system_mkl05z4.o
+    0x1ffffc04   0x00002fd0   0x00000004   Data   RW          193    .data.game_speed    arkanoid.o
+    0x1ffffc08   0x00002fd4   0x00000030   Data   RW          295    .data.key_map       keyboard.o
+    0x1ffffc38   0x00003004   0x00000004   Data   RW          194    .data.lives         arkanoid.o
+    0x1ffffc3c   0x00003008   0x00000010   Data   RW          276    .data.menu_options  menu.o
+    0x1ffffc4c   0x00003018   0x00000010   Data   RW          277    .data.oled_options  menu.o
+    0x1ffffc5c   0x00003028   0x00000024   Data   RW          215    .data.top_scores    scores.o
+    0x1ffffc80   0x0000304c   0x00000006   Data   RW          281    .data.user_nickname  menu.o
+
+
+    Execution Region ER_ZI (Exec base: 0x1ffffc88, Load base: 0x00003054, Size: 0x00000620, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1ffffc88        -       0x00000060   Zero   RW          384    .bss                c_p.l(libspace.o)
+    0x1ffffce8        -       0x00000001   Zero   RW          196    .bss.ball_is_reset  arkanoid.o
+    0x1ffffce9        -       0x000000a0   Zero   RW          195    .bss.blocks         arkanoid.o
+    0x1ffffd89   0x00003054   0x00000003   PAD
+    0x1ffffd8c        -       0x00000004   Zero   RW          192    .bss.current_map    arkanoid.o
+    0x1ffffd90        -       0x00000004   Zero   RW          191    .bss.current_score  arkanoid.o
+    0x1ffffd94        -       0x00000004   Zero   RW          278    .bss.czas           menu.o
+    0x1ffffd98        -       0x00000001   Zero   RW          154    .bss.end_flag       tsi.o
+    0x1ffffd99   0x00003054   0x00000001   PAD
+    0x1ffffd9a        -       0x00000004   Zero   RW          157    .bss.gu16Baseline   tsi.o
+    0x1ffffd9e        -       0x00000004   Zero   RW          155    .bss.gu16Delta      tsi.o
+    0x1ffffda2        -       0x00000001   Zero   RW          158    .bss.ongoing_elec   tsi.o
+    0x1ffffda3        -       0x00000400   Zero   RW          129    .bss.s_chDispalyBuffer  oled.o
+    0x200001a3        -       0x00000001   Zero   RW          279    .bss.sekunda        menu.o
+    0x200001a4        -       0x00000001   Zero   RW          280    .bss.sekunda_OK     menu.o
+    0x200001a5   0x00003054   0x00000003   PAD
+    0x200001a8        -       0x00000000   Zero   RW          304    HEAP                startup_mkl05z4.o
+    0x200001a8        -       0x00000100   Zero   RW          303    STACK               startup_mkl05z4.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       656         36          0          8        169       4463   arkanoid.o
+         0          0       1350          0          0       1763   fonts.o
+       172         16          0          0          0       1097   game.o
+       384         64          0          0          0       2141   game_draw.o
+        76         12          0          0          0       2183   gpio.o
+       168         20         24         48          0       2200   keyboard.o
+        10          0          0          0          0        325   main.o
+         0          0       4000          0          0        327   maps.o
+      1468        188         71         38          6       6930   menu.o
+      1144         60          0          0       1024       8151   oled.o
+        96          8          0         36          0       1177   scores.o
+       292         28          0          0          0       4214   spi.o
+        68         38        192          0        256        804   startup_mkl05z4.o
+        76         16          0          4          0       2313   system_mkl05z4.o
+       504         68          2          0         10       4740   tsi.o
+
+    ----------------------------------------------------------------------
+      5116        554       5672        136       1472      42828   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          1          2          7          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        60          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+      1006          4          0          0          0        184   aeabi_sdivfast.o
+        16          0          0          0          0         68   exit.o
+         6          0          0          0          0        136   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+        64          0          0          0          0        108   rt_memclr.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+       108          4          0          0          0         76   strncpy.o
+        12          4          0          0          0         60   sys_exit.o
+        62          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+      1448         24          0          0         96        916   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1444         24          0          0         96        916   c_p.l
+
+    ----------------------------------------------------------------------
+      1448         24          0          0         96        916   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6564        578       5672        136       1568      43240   Grand Totals
+      6564        578       5672        136       1568      43240   ELF Image Totals
+      6564        578       5672        136          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                12236 (  11.95kB)
+    Total RW  Size (RW Data + ZI Data)              1704 (   1.66kB)
+    Total ROM Size (Code + RO Data + RW Data)      12372 (  12.08kB)
+
+==============================================================================
+
